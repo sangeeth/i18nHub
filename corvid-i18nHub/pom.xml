@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.corvid.i18nHub</groupId>
+  <artifactId>corvid-i18nHub</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>corvid-i18nHub</name>
+  <modules>
+  	<module>corvid-i18nHub-core</module>
+  	<module>corvid-i18nHub-client</module>
+    <module>corvid-i18nHub-portal</module>
+  </modules>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.corvid.jay</groupId>
+  		<artifactId>jay-lang</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.corvid.jay</groupId>
+  		<artifactId>jay-commons</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.slf4j</groupId>
+  		<artifactId>slf4j-api</artifactId>
+  		<version>1.6.4</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.slf4j</groupId>
+  		<artifactId>slf4j-jdk14</artifactId>
+  		<version>1.6.4</version>
+  	</dependency>
+  </dependencies>
+</project>
