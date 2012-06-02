@@ -1,3 +1,5 @@
+import java.util.Properties;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
@@ -9,8 +11,10 @@ public class HibernateUtil {
         return sessionFactory.getCurrentSession();
     }
     
-    public static void configure() {
-        AnnotationConfiguration configuration = new AnnotationConfiguration().configure("hibernate_cfg.xml");
+    public static void configure() throws Exception {
+        AnnotationConfiguration configuration = new AnnotationConfiguration();
+        configuration.configure();
+        
         sessionFactory = configuration.buildSessionFactory();
     }
 }

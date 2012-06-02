@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="current_session_context_class">thread</property>
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+			
+		<mapping class="corvid.i18nhub.core.entity.BundleEntity" />
+		<mapping class="corvid.i18nhub.core.entity.DictionaryEntity" />
+		<mapping class="corvid.i18nhub.core.entity.MessageEntity" />
+		<mapping class="corvid.i18nhub.core.entity.ProjectEntity" />
+		<mapping class="corvid.i18nhub.core.entity.UserEntity" />
+		<mapping class="corvid.i18nhub.core.entity.CollaboratorEntity" />
+		<mapping class="corvid.i18nhub.core.entity.LocaleEntity" />
+	</session-factory>
+</hibernate-configuration>

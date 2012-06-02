@@ -9,46 +9,36 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name="USER", 
+@Table(name="AVAILABLE_LOCALE", 
        uniqueConstraints={@UniqueConstraint(name="UNIQUE_CONSTRAINT",
-                                            columnNames={"name", "emailAddress"})})
-public class UserEntity extends AbstractEntity {
+                                            columnNames={"code"})})
+public class LocaleEntity extends AbstractEntity {
     private static final long serialVersionUID = 1L;
-
+    
     private Long id;
     
-    private String name;
+    private String code;
     
-    private String emailAddress;
-
-    public UserEntity() {
+    public LocaleEntity() {
         super();
     }
 
-    @Column(name="userId")
+    @Column(name="localeId")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(Long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getCode() {
+        return code;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmailAddress() {
-        return emailAddress;
-    }
-
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
+    public void setCode(String code) {
+        this.code = code;
     }
 }
